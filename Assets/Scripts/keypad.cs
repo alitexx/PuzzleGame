@@ -8,7 +8,6 @@ public class keypad : MonoBehaviour
     string Code = "4059";
     string Nr = null;
     int NrIndex = 0;
-    string alpha;
     public TextMeshProUGUI UiText = null;
 
     public void CodeFunction(string Numbers)
@@ -17,17 +16,31 @@ public class keypad : MonoBehaviour
         Nr = Nr + Numbers;
         UiText.text = Nr;
 
+        if (NrIndex >= 6)
+        {
+            fullWipe();
+        }
+
     }
     public void Enter()
     {
         if (Nr == Code)
         {
             SceneManager.LoadScene(1);
+        } else
+        {
+            fullWipe();
         }
     }
     public void Delete()
     {
-        NrIndex++;
+        NrIndex--;
+        Nr = Nr.Substring(0, Nr.Length - 1);
+        UiText.text = Nr;
+    }
+    private void fullWipe()
+    {
+        NrIndex = 0;
         Nr = null;
         UiText.text = Nr;
     }
