@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 805d948fedcd7b749ac47cd45d0e14c3
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - item1: {instanceID: 0}
+  - item2: {instanceID: 0}
+  - item3: {instanceID: 0}
+  - item4: {instanceID: 0}
+  - item5: {instanceID: 0}
+  - winGUI: {instanceID: 0}
+  - pauseManager: {instanceID: 0}
+  - CorrectSound: {instanceID: 0}
+  - correct: {fileID: 8300000, guid: aa17ee07ba533b44e964eea269e5cd1e, type: 3}
+  - IncorrectSound: {instanceID: 0}
+  - incorrect: {fileID: 8300000, guid: baaf406413a246e4a9e55a639e79c799, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
