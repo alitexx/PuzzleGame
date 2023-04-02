@@ -19,7 +19,7 @@ public class slidePuzzle : MonoBehaviour
             ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out hit, 5f))
             {
-                if (Vector3.Distance(emptySpace.position, hit.transform.position) <= 0.51)
+                if ((Vector3.Distance(emptySpace.position, hit.transform.position) <= 0.51) && (hit.transform.name != "emptySpace"))
                 {
                     Vector3 lastEmptySpacePos = emptySpace.position;
                     emptySpace.position = hit.transform.position;

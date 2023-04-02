@@ -6,6 +6,8 @@ using TMPro;
 public class keypad : MonoBehaviour
 {
     public GameObject winMenu;
+    public AudioSource correct;
+    public AudioSource wrong;
     string Code = "4059";
     string Nr = null;
     int NrIndex = 0;
@@ -20,6 +22,7 @@ public class keypad : MonoBehaviour
         if (NrIndex >= 6)
         {
             fullWipe();
+            wrong.Play();
         }
 
     }
@@ -27,10 +30,12 @@ public class keypad : MonoBehaviour
     {
         if (Nr == Code)
         {
+            correct.Play();
             Time.timeScale = 0f;//pause game
             winMenu.SetActive(true);
         } else
         {
+            wrong.Play();
             fullWipe();
         }
     }
