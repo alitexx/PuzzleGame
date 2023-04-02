@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     //CharacterController handels the collisions and movement
     public CharacterController controller;
-    public float speed = 1f;
+    public float speed = 5f;
 
     // Update is called once per frame
     void Update()
