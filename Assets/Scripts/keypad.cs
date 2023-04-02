@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 using TMPro;
 public class keypad : MonoBehaviour
 {
+    public GameObject winMenu;
     string Code = "4059";
     string Nr = null;
     int NrIndex = 0;
@@ -26,7 +27,8 @@ public class keypad : MonoBehaviour
     {
         if (Nr == Code)
         {
-            SceneManager.LoadScene(1);
+            Time.timeScale = 0f;//pause game
+            winMenu.SetActive(true);
         } else
         {
             fullWipe();
