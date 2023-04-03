@@ -19,7 +19,7 @@ public class keypad : MonoBehaviour
         Nr = Nr + Numbers;
         UiText.text = Nr;
 
-        if (NrIndex >= 6)
+        if (NrIndex >= 5)
         {
             fullWipe();
             wrong.Play();

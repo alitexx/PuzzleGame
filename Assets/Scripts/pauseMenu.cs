@@ -15,16 +15,20 @@ public class pauseMenu : MonoBehaviour
     }
     public void togglePause()
     {
-        ui.SetActive(!ui.activeSelf);
+        if (onMouseDownSticky.isInMenu == false)
+        {
+            ui.SetActive(!ui.activeSelf);
 
-        if (ui.activeSelf)
-        {
-            Time.timeScale = 0f;
-            Cursor.lockState = CursorLockMode.Confined;
-        } else
-        {
-            Time.timeScale = 1f;
-            Cursor.lockState = CursorLockMode.Locked;
+            if (ui.activeSelf)
+            {
+                Time.timeScale = 0f;
+                Cursor.lockState = CursorLockMode.Confined;
+            }
+            else
+            {
+                Time.timeScale = 1f;
+                Cursor.lockState = CursorLockMode.Locked;
+            }
         }
     }
 }
