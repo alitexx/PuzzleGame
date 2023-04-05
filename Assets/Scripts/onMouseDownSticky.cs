@@ -11,6 +11,7 @@ public class onMouseDownSticky : MonoBehaviour
     public string desiredText; // changes with each sticky
     public TextMeshProUGUI textBox;
     public Transform player;
+    public AudioSource sticky;
 
     private void OnMouseDown()
     {
@@ -20,8 +21,9 @@ public class onMouseDownSticky : MonoBehaviour
             Time.timeScale = 0f;//pause game
             Cursor.lockState = CursorLockMode.Confined;
             menuOpened.SetActive(true);
-            if (desiredText != null) // if its null we just open the menu
+            if (desiredText != "NULL") // if its null we just open the menu
             {
+                sticky.Play();
                 textBox.text = desiredText;
             }
         }

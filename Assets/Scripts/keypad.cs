@@ -8,6 +8,7 @@ public class keypad : MonoBehaviour
     public GameObject winMenu;
     public AudioSource correct;
     public AudioSource wrong;
+    public AudioSource typeNum;
     string Code = "4059";
     string Nr = null;
     int NrIndex = 0;
@@ -23,6 +24,9 @@ public class keypad : MonoBehaviour
         {
             fullWipe();
             wrong.Play();
+        } else
+        {
+            typeNum.Play();
         }
 
     }
